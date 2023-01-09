@@ -14,6 +14,54 @@
     <title>Vanilla wx app</title>
   </head>
   <body>
+    <div class="container">
+      <form action="/submit" class="search" id="city-form">
+        <input
+          type="text"
+          placeholder="City Search"
+          class="form-control"
+          id="city-input"
+        />
+        <input type="submit" value="Search" class="searchEnter" />
+      </form>
+      <button class="button" id="button">Current Location</button>
+      <div class="row">
+        <div class="col-6">
+          <div class="card wxNow">
+            <div class="card-body">
+              <h1 class="card-title" id="city">City Name</h1>
+              <h2 class="tempNow" id="presentTemp">
+                <span id="tempNow">temp</span>
+                <a href="#" class="unit" id="cel">℃/</a>
+                <a href="#" class="unit" id="fer">℉</a>
+              </h2>
+              <p class="card-text today" id="day-today">Friday</p>
+              <p class="card-text today" id="date-today">09/12/2022</p>
+              <p class="card-text today" id="time-now">15:40</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="mainEmoji">🌤️</div>
+          <h2 class="todayForcast">Partly cloudy</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <h2 class="todayHilo">Day 04°/Night -1°</h2>
+          <p class="todayInfo">
+            Wind : 8km/h
+            <br />
+            Precipiation : 10%
+            <br />
+            Humidity : 88%
+            <br />
+            Dew point : 0℃
+            <br />
+            UV index : Low
+          </p>
+        </div>
+    </div>
     <script src="src/app.js"></script>
   </body>
 </html>
