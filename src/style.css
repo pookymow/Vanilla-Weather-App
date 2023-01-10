@@ -1,0 +1,73 @@
+body {
+  background: rgb(239, 235, 250);
+  font-family: "Karla", sans-serif;
+}
+.box {
+  background-color: white;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.mainbody {
+  text-align: center;
+}
+h1 {
+  text-transform: capitalize;
+}
+.tempNow {
+  display: block;
+  margin: 50px auto;
+  font-size: 50px;
+  color: #8f42c3;
+}
+h2 {
+  font-size: 30px;
+  color: #8f42c3;
+}
+.search {
+  display: block;
+  margin-top: 6px;
+}
+
+.searchEnter {
+  color: white;
+  display: block;
+  font-size: 18px;
+
+  padding: 4px 30px;
+  background-color: #8f42c3;
+
+  border-radius: 30px;
+  border: solid 2px white;
+}
+.button {
+  color: white;
+  display: block;
+  font-size: 18px;
+  margin: 10px auto;
+  padding: 8px 30px;
+  background-color: rgb(252, 193, 26);
+
+  margin-bottom: 15px;
+  border-radius: 30px;
+  border: solid 2px white;
+}
+.mainEmoji {
+  font-size: 100px;
+}
+h3 {
+  font-size: 20px;
+}
+.unit {
+  font-size: 30px;
+  color: black;
+  position: relative;
+  top: -32px;
+  left: -20px;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
