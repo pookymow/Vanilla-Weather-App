@@ -11,6 +11,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Vanilla wx app</title>
   </head>
@@ -43,32 +44,30 @@
           <div class="col-6">
 <div class="tempNow" id="presentTemp">
             <span id="tempNow">21</span>
+            
             <a href="#" class="unit" id="cel">℃/</a>
             <a href="#" class="unit" id="fer">℉</a>
 </div>
+<div class="todayHilo">Day <span id="day">04°</span>℃ /Night <span id="night">-1°</span>℃</div>
           </div>
           </div>
-          <h2 class="todayForcast">Partly cloudy</h2>
-
-          
-          
+          <h2 class="todayForcast" id="forcast" >Partly cloudy</h2>
         </div>
         <div class="row">
           <div class="col-6">
             <ul>
-            <li class="card-text today" id="day-today">Friday  15:40</li>
+            <li class="card-text today" ><span id="day-today">Friday</span>  <span id="time-now">15:40</span> </li>
             <li class="card-text today" id="date-today">09/12/2022</li>
             
-            <li class="todayHilo">Day 04°/Night -1°</li>
             </ul>
           </div>
           <div class="col-6">
             <ul class="">
             <li class="wind">
-              Wind : 8km/h
+              Wind : <span id="wind">8</span>km/h
               </li>
-              <li>Precipiation : 10%</li>
-              <li>Humidity : 88%</li>
+              
+              <li>Humidity : <span id="humidity">88</span>%</li>
             </ul>
           </div>
         </div>

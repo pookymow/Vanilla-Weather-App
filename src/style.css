@@ -13,14 +13,19 @@ body {
 .mainbody {
   text-align: center;
 }
-h1 {
+h1,
+h2 {
   text-transform: capitalize;
 }
 .tempNow {
   display: block;
-  margin: 50px auto;
+  margin: 50px auto -10px auto;
+
   font-size: 50px;
   color: #8f42c3;
+}
+.todayHilo {
+  margin-bottom: 10px;
 }
 h2 {
   font-size: 30px;
