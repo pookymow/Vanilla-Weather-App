@@ -7,17 +7,22 @@ function showCurrentCity(responce) {
 //current Wx
 function showWx(responce) {
   let forcast = document.querySelector("#forcast");
-  let currentTemp = document.querySelector("#tempNow");
-  let dayTemp = document.querySelector("#day");
-  let nightTemp = document.querySelector("#night");
-  let wind = document.querySelector("#wind");
-  let humidity = document.querySelector("#humidity");
   forcast.innerHTML = responce.data.weather[0].description;
+  let currentTemp = document.querySelector("#tempNow");
   currentTemp.innerHTML = Math.round(responce.data.main.temp);
+  let dayTemp = document.querySelector("#day");
   dayTemp.innerHTML = Math.round(responce.data.main.temp_max);
+  let nightTemp = document.querySelector("#night");
   nightTemp.innerHTML = Math.round(responce.data.main.temp_min);
+  let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(responce.data.wind.speed);
+  let humidity = document.querySelector("#humidity");
   humidity.innerHTML = Math.round(responce.data.main.humidity);
+  let iconElement = document.getElementById("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function showLocation(position) {
