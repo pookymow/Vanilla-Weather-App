@@ -18,7 +18,7 @@ function showWx(responce) {
   wind.innerHTML = Math.round(responce.data.wind.speed);
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = Math.round(responce.data.main.humidity);
-  let iconElement = document.getElementById("#icon");
+  let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
