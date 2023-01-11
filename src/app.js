@@ -94,20 +94,20 @@ navigator.geolocation.getCurrentPosition(showLocation);
 //
 //
 //button
-function reloadInput() {
-  let reload = document.querySelector(".form-control");
-  reload.innerHTML = ` City Search`;
-}
+//function reloadInput() {
+//let reload = document.querySelector(".form-control");
+//reload.innerHTML = ` City Search`;
+//}
 function goHome() {
   navigator.geolocation.getCurrentPosition(showLocation);
 }
-function subimt() {
-  goHome();
-  reloadInput();
-}
+//function subimt() {
+//goHome();
+// reloadInput();
+//}
 
 let buttonSearch = document.querySelector("#button");
-buttonSearch.addEventListener("click", subimt);
+buttonSearch.addEventListener("click", goHome);
 
 //search input to h1 City
 
