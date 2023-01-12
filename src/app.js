@@ -43,8 +43,7 @@ function showDate() {
 
 let dateToday = document.querySelector("#date-today");
 dateToday.innerHTML = showDate();
-//
-//
+
 //Geo location of heading
 function showCurrentCity(responce) {
   console.log(responce.data.list[1].name);
@@ -74,11 +73,8 @@ function showWx(responce) {
     `http://openweathermap.org/img/wn/${responce.data.weather[0].icon}@2x.png`
   );
 }
-
+//lat log
 function showLocation(position) {
-  console.log(position);
-  console.log(position.coords.latitude);
-  console.log(position.coords.longitude);
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let apikey = "11b98ae98b471e0d97626fd2fa0ca512";
@@ -91,26 +87,17 @@ function showLocation(position) {
 
 navigator.geolocation.getCurrentPosition(showLocation);
 
-//
-//
 //button
-//function reloadInput() {
-//let reload = document.querySelector(".form-control");
-//reload.innerHTML = ` City Search`;
-//}
 function goHome() {
   navigator.geolocation.getCurrentPosition(showLocation);
+  let reload = document.querySelector("#city-input");
+  reload.value = `City search`;
 }
-//function subimt() {
-//goHome();
-// reloadInput();
-//}
 
 let buttonSearch = document.querySelector("#button");
 buttonSearch.addEventListener("click", goHome);
 
 //search input to h1 City
-
 function search(event) {
   event.preventDefault();
   let inputCity = document.getElementById("city-input");
@@ -126,8 +113,6 @@ function search(event) {
 let searchCity = document.querySelector("#city-form");
 searchCity.addEventListener("submit", search);
 
-//
-//
 //C/F
 function showCel() {
   let celTemp = document.querySelector("#tempNow");
