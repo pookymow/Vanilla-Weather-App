@@ -91,7 +91,7 @@ navigator.geolocation.getCurrentPosition(showLocation);
 function goHome() {
   navigator.geolocation.getCurrentPosition(showLocation);
   let reload = document.querySelector("#city-input");
-  reload.value = `City search`;
+  reload.value = ``;
 }
 
 let buttonSearch = document.querySelector("#button");
