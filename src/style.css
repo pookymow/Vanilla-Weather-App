@@ -88,3 +88,15 @@ li {
   text-align: center;
   margin-top: -35px;
 }
+.wx-forecast {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+.emoji-forecast {
+  background-color: rgb(193, 177, 235);
+  border-radius: 70px;
+}
+.forecast-max {
+  color: #8f42c3;
+}
