@@ -46,6 +46,7 @@ dateToday.innerHTML = showDate();
 
 //Geo location of heading
 function showCurrentCity(responce) {
+  console.log(responce.data);
   console.log(responce.data.list[1].name);
   let h1CurrentCity = document.querySelector("#city");
   h1CurrentCity.innerHTML = `${responce.data.list[1].name}`;
@@ -73,10 +74,13 @@ function showWx(responce) {
     `http://openweathermap.org/img/wn/${responce.data.weather[0].icon}@2x.png`
   );
 }
+
 //lat log
 function showLocation(position) {
   let latitude = position.coords.latitude;
+  console.log(latitude);
   let longitude = position.coords.longitude;
+  console.log(longitude);
   let apikey = "11b98ae98b471e0d97626fd2fa0ca512";
   let apiFind = `https://api.openweathermap.org/data/2.5/find?lat=${latitude}&lon=${longitude}&appid=${apikey}&units=metric`;
   let apiWx = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apikey}&units=metric`;
@@ -146,3 +150,29 @@ toCel.addEventListener("click", showCel);
 
 let toFer = document.querySelector("#fer");
 toFer.addEventListener("click", showFer);
+
+//
+//
+//froecast
+function displayForecast() {
+  let forecastEl = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+                <div class="wx-forecast-day">
+                ${day}
+                </div>
+                <div class="emoji-forecast">
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" width="50px">
+                </div>
+                <span class="forecast-max" >5℃</span> 
+                <span class="forecast-min">1℃</span>
+              </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastEl.innerHTML = forecastHTML;
+}
+displayForecast();
