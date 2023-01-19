@@ -55,17 +55,17 @@ function showWx(responce) {
   forcast.innerHTML = responce.data.daily[0].condition.description;
   let currentTemp = document.querySelector("#tempNow");
   currentTemp.innerHTML = Math.round(responce.data.daily[0].temperature.day);
-
+  orginalTemp = responce.data.daily[0].temperature.day;
   let dayTemp = document.querySelector("#day");
   dayTemp.innerHTML = `${Math.round(
     responce.data.daily[0].temperature.maximum
   )}℃`;
-
+  orginalDay = responce.data.daily[0].temperature.maximum;
   let nightTemp = document.querySelector("#night");
   nightTemp.innerHTML = `${Math.round(
     responce.data.daily[0].temperature.minimum
   )}℃`;
-
+  orginalNyt = responce.data.daily[0].temperature.minimum;
   let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(responce.data.daily[0].wind.speed);
   let humidity = document.querySelector("#humidity");
@@ -88,7 +88,7 @@ function formateForecastDay(timestamp) {
 
 function fiveDay(responce) {
   console.log(responce.data);
-  console.log(responce.data.daily[0].temperature.day);
+  //console.log(responce.data.daily[0].temperature.day);
 
   let forecastEl = document.querySelector("#forecast");
   let wxForecast = responce.data.daily;
@@ -176,6 +176,9 @@ function showCel() {
   dayC.innerHTML = `${Math.round(orginalDay)}℃`;
   let nytC = document.querySelector("#night");
   nytC.innerHTML = `${Math.round(orginalNyt)}℃`;
+  let cityCel = document.querySelector("h1");
+  let apiCel = `https://api.shecodes.io/weather/v1/forecast?query=${cityCel.innerHTML}&key=dcdbob4f1ac005349aea9810b37ft2d4&units=metric`;
+  axios.get(apiCel).then(fiveDay);
 }
 function showFer() {
   let temprature = document.querySelector("#tempNow");
@@ -189,7 +192,13 @@ function showFer() {
   let nyt = document.querySelector("#night");
   let nytF = (orginalNyt * 9) / 5 + 32;
   nyt.innerHTML = `${Math.round(nytF)}℉`;
+  let cityFer = document.querySelector("h1");
+  console.log(cityFer.innerHTML);
+  let apiFer = `https://api.shecodes.io/weather/v1/forecast?query=${cityFer.innerHTML}&key=dcdbob4f1ac005349aea9810b37ft2d4&units=imperial`;
+  console.log(apiFer);
+  axios.get(apiFer).then(fiveDay);
 }
+
 let orginalTemp = null;
 let orginalDay = null;
 let orginalNyt = null;
