@@ -114,4 +114,14 @@ li {
   .box {
     max-width: 250px;
   }
+  .mainEmoji {
+    width: 80px;
+    margin: 10px auto;
+  }
+  .mainIcon {
+    width: 60px;
+  }
+  .imgEmoji {
+    width: 20px;
+  }
 }
