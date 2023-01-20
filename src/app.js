@@ -95,7 +95,7 @@ function fiveDay(responce) {
   let forecastHTML = `<div class="row">`;
 
   wxForecast.forEach(function (forecastday, index) {
-    if (index < 6) {
+    if (index > 0) {
       forecastHTML =
         forecastHTML +
         `<div class="col-2">

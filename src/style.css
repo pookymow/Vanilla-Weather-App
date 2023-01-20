@@ -1,11 +1,13 @@
 body {
-  background: rgb(239, 235, 250);
+  background-image: url("../img/landscape.jpg");
+  background-repeat: no-repeat;
+  background-color: rgb(239 235 250);
   font-family: "Karla", sans-serif;
 }
 
 .box {
   background-color: white;
-  max-width: 650px;
+  max-width: 600px;
   margin: 40px auto;
   padding: 20px;
   border: 1px solid gray;
