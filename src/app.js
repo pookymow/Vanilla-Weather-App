@@ -21,7 +21,13 @@ dayToday.innerHTML = showDay();
 function showTime() {
   let today = new Date();
   let hour = today.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
   let mins = today.getMinutes();
+  if (mins < 10) {
+    mins = `0${mins}`;
+  }
   let currenttime = `${hour}:${mins}`;
   return currenttime;
 }
