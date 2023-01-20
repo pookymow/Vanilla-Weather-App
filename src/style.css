@@ -7,11 +7,11 @@ body {
 
 .box {
   background-color: white;
+  border: 1px solid gray;
+  border-radius: 10px;
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
-  border: 1px solid gray;
-  border-radius: 10px;
 }
 .mainbody {
   text-align: center;
@@ -21,18 +21,17 @@ h2 {
   text-transform: capitalize;
 }
 .tempNow {
-  display: block;
-  margin: 50px auto -10px auto;
-
-  font-size: 50px;
   color: #8f42c3;
+  display: block;
+  font-size: 50px;
+  margin: 50px auto -10px auto;
 }
 .todayHilo {
   margin-bottom: 10px;
 }
 h2 {
-  font-size: 30px;
   color: #8f42c3;
+  font-size: 30px;
 }
 .search {
   display: block;
@@ -40,27 +39,24 @@ h2 {
 }
 
 .searchEnter {
+  background-color: #8f42c3;
+  border-radius: 30px;
+  border: solid 2px white;
   color: white;
   display: block;
   font-size: 18px;
-
   padding: 4px 30px;
-  background-color: #8f42c3;
-
-  border-radius: 30px;
-  border: solid 2px white;
 }
 .button {
+  border-radius: 30px;
+  border: solid 2px white;
+  background-color: #e9ae20;
   color: white;
   display: block;
   font-size: 18px;
   margin: 10px auto;
-  padding: 8px 30px;
-  background-color: #e9ae20;
-
   margin-bottom: 15px;
-  border-radius: 30px;
-  border: solid 2px white;
+  padding: 8px 30px;
 }
 .mainEmoji {
   background-color: rgb(193, 177, 235);
@@ -77,11 +73,11 @@ h3 {
 .unit {
   font-size: 30px;
   color: black;
+  cursor: default;
+  left: -20px;
   position: relative;
   top: -32px;
-  left: -20px;
   text-decoration: none;
-  cursor: default;
 }
 .active {
   color: #8f42c3;
@@ -91,9 +87,9 @@ li {
 }
 
 .wx-forecast {
+  font-size: 16px;
   margin-top: 20px;
   text-align: center;
-  font-size: 16px;
 }
 
 .emoji-forecast {

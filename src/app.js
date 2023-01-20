@@ -16,8 +16,7 @@ function showDay() {
 
 let dayToday = document.querySelector("#day-today");
 dayToday.innerHTML = showDay();
-//
-//
+
 //Time
 function showTime() {
   let today = new Date();
@@ -26,14 +25,13 @@ function showTime() {
   let currenttime = `${hour}:${mins}`;
   return currenttime;
 }
+
 let timeNow = document.querySelector("#time-now");
 timeNow.innerHTML = showTime();
-//
-//
+
 //Date
 function showDate() {
   let today = new Date();
-
   let day = today.getDate();
   let year = today.getFullYear();
   let month = today.getMonth() + 1;
@@ -49,6 +47,7 @@ function showCurrentCity(responce) {
   let h1CurrentCity = document.querySelector("#city");
   h1CurrentCity.innerHTML = `${responce.data.city}`;
 }
+
 //current Wx
 function showWx(responce) {
   let forcast = document.querySelector("#forcast");
@@ -76,8 +75,7 @@ function showWx(responce) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${responce.data.daily[0].condition.icon}.png`
   );
 }
-//
-//
+
 //forecast
 function formateForecastDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -88,12 +86,9 @@ function formateForecastDay(timestamp) {
 
 function fiveDay(responce) {
   console.log(responce.data);
-  //console.log(responce.data.daily[0].temperature.day);
-
   let forecastEl = document.querySelector("#forecast");
   let wxForecast = responce.data.daily;
   let forecastHTML = `<div class="row">`;
-
   wxForecast.forEach(function (forecastday, index) {
     if (index > 0) {
       forecastHTML =
@@ -139,6 +134,7 @@ function showLocation(position) {
 }
 
 navigator.geolocation.getCurrentPosition(showLocation);
+
 //button
 function goHome() {
   navigator.geolocation.getCurrentPosition(showLocation);
@@ -163,6 +159,7 @@ function search(event) {
     axios.get(api).then(fiveDay);
   }
 }
+
 let searchCity = document.querySelector("#city-form");
 searchCity.addEventListener("submit", search);
 
@@ -180,6 +177,7 @@ function showCel() {
   let apiCel = `https://api.shecodes.io/weather/v1/forecast?query=${cityCel.innerHTML}&key=dcdbob4f1ac005349aea9810b37ft2d4&units=metric`;
   axios.get(apiCel).then(fiveDay);
 }
+
 function showFer() {
   let temprature = document.querySelector("#tempNow");
   let ferTemp = (orginalTemp * 9) / 5 + 32;
