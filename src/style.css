@@ -110,3 +110,8 @@ li {
   text-align: center;
   margin-top: -35px;
 }
+@media (max-width: 350px) {
+  .box {
+    max-width: 250px;
+  }
+}
