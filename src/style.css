@@ -112,10 +112,11 @@ li {
 }
 @media (max-width: 450px) {
   .box {
-    max-width: 350px;
+    max-width: 400px;
   }
-  .phone {
-    display: flex;
+  .searchEnter {
+    max-width: 120px;
+    padding: 4px 10px;
   }
   .mainEmoji {
     width: 150px;
@@ -126,9 +127,9 @@ li {
   }
   .emoji-forecast {
     width: 50px;
-    margin: 10px 5px;
+    margin: 10px -7px;
   }
   .imgEmoji {
-    width: 45px;
+    width: 40px;
   }
 }
