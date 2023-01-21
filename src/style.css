@@ -112,16 +112,20 @@ li {
 }
 @media (max-width: 450px) {
   .box {
-    max-width: 250px;
+    max-width: 350px;
+  }
+  .city-input::after {
+    content: "\a";
+    white-space: pre;
   }
   .mainEmoji {
-    width: 80px;
-    margin: 10px auto;
+    width: 120px;
+    margin: 20px auto;
   }
   .mainIcon {
-    width: 60px;
+    width: 100px;
   }
   .imgEmoji {
-    width: 20px;
+    width: 45px;
   }
 }
