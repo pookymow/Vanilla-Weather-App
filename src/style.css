@@ -114,16 +114,18 @@ li {
   .box {
     max-width: 350px;
   }
-  .city-input::after {
-    content: "\a";
-    white-space: pre;
+  #city-form {
+    display: flex;
   }
   .mainEmoji {
-    width: 120px;
+    width: 150px;
     margin: 20px auto;
   }
   .mainIcon {
-    width: 100px;
+    width: 120px;
+  }
+  .emoji-forecast {
+    width: 50px;
   }
   .imgEmoji {
     width: 45px;
