@@ -89,7 +89,7 @@ function formateForecastDay(timestamp) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[day];
 }
-
+//
 function fiveDay(responce) {
   console.log(responce.data);
   let forecastEl = document.querySelector("#forecast");
@@ -111,12 +111,14 @@ function fiveDay(responce) {
                   
                 </div>
                 <div class="tempVeiw">
+                
                 <span class="forecast-max" >${Math.round(
                   forecastday.temperature.maximum
-                )}℃</span> 
+                )}</span> <span id="unit-change">℃</span>
+                
                 <span class="forecast-min">${Math.round(
                   forecastday.temperature.minimum
-                )}℃</span>
+                )}</span> <span id="unit-change">℃</span>
                 </div>
                 </div>
               </div>`;
@@ -196,6 +198,12 @@ function showFer() {
   let nyt = document.querySelector("#night");
   let nytF = (orginalNyt * 9) / 5 + 32;
   nyt.innerHTML = `${Math.round(nytF)}℉`;
+  //
+  //
+  //Question
+  let unitChange = document.querySelector("#unit-change");
+  unitChange.innerHTML = `℉`;
+  //
   let cityFer = document.querySelector("h1");
   console.log(cityFer.innerHTML);
   let apiFer = `https://api.shecodes.io/weather/v1/forecast?query=${cityFer.innerHTML}&key=dcdbob4f1ac005349aea9810b37ft2d4&units=imperial`;
