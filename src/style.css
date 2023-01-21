@@ -114,7 +114,7 @@ li {
   .box {
     max-width: 350px;
   }
-  #city-form {
+  .phone {
     display: flex;
   }
   .mainEmoji {
@@ -126,6 +126,7 @@ li {
   }
   .emoji-forecast {
     width: 50px;
+    margin: 10px 5px;
   }
   .imgEmoji {
     width: 45px;
